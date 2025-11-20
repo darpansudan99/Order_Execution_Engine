@@ -1,0 +1,67 @@
+{
+	"info": {
+		"_postman_id": "a9e8c1c1-3a2b-4e6b-8e1e-9a9a9a9a9a9a",
+		"name": "Order Execution Engine",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Execute Order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"tokenIn\": \"SOL\",\n    \"tokenOut\": \"USDC\",\n    \"amount\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/orders/execute",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"orders",
+						"execute"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Order Status (WebSocket)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "ws://localhost:3000/api/orders/status/:orderId",
+					"protocol": "ws",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"orders",
+						"status",
+						":orderId"
+					],
+					"variable": [
+						{
+							"key": "orderId",
+							"value": "ENTER_ORDER_ID_HERE"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,35 @@
+#root {
+  max-width: 100vw;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.app-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.terminal-pane {
+  flex: 1; /* Takes up 50% of the width */
+  background-color: #1e1e1e; /* Dark background for terminal */
+  color: #00ff00; /* Green text for terminal */
+  overflow: auto; /* Scroll if content overflows */
+  padding: 10px;
+  box-sizing: border-box;
+  border-right: 1px solid #333;
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+  font-size: 0.8em;
+  white-space: pre-wrap; /* Preserve whitespace and wrap text */
+}
+
+.dashboard-pane {
+  flex: 1; /* Takes up 50% of the width */
+  background-color: #282c34; /* General app background */
+  color: white;
+  overflow: auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
